@@ -1,0 +1,48 @@
+/*
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+/*
+normalize.css v^3.0 | MIT License | git.io/normalize
+Copyright (c) Nicolas Gallagher and Jonathan Neal
+*/
+/* normalize.css v3.0.2 | MIT License | git.io/normalize */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline;}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0;}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0;}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}[hidden]{display:none !important}/*
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+a$pure-button-primary,a$pure-button-selected{background-color:#0078e7;color:#fff}/*
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+#tldr-what-is-it .so-what-wrapper,#what-do-we-have > ul,#details-style-guides .details,#bad-examples .details,#details-post-proc .details{letter-spacing:-.31em;*letter-spacing:normal;*word-spacing:-.43em;text-rendering:optimizespeed;font-family:FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;display:-webkit-flex;-webkit-flex-flow:row wrap;display:-ms-flexbox;-ms-flex-flow:row wrap}#tldr-what-is-it .so-what-wrapper,#what-do-we-have > ul,#details-style-guides .details,#bad-examples .details,#details-post-proc .details{word-spacing:-.43em}#tldr-what-is-it .so-what-wrapper > figure,#tldr-what-is-it .so-what-wrapper > .details,#what-do-we-have > ul > li,#details-style-guides .details > ul,#bad-examples pre,#bad-examples figure,#details-post-proc ul,#details-post-proc figure{display:inline-block;*display:inline;zoom:1;letter-spacing:normal;word-spacing:normal;vertical-align:top;text-rendering:auto}#tldr-what-is-it .so-what-wrapper > figure,#tldr-what-is-it .so-what-wrapper > .details,#what-do-we-have > ul > li,#details-style-guides .details > ul,#bad-examples pre,#bad-examples figure,#details-post-proc ul,#details-post-proc figure{width:50%;*width:49.969%}/*
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+/*
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+/*
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+/*
+Pure v0.5.0
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+#what-do-we-have > ul,#details-style-guides .details,#bad-examples .details,#details-post-proc .details{padding:0;}#what-do-we-have > ul > li,#details-style-guides .details > li,#bad-examples .details > li,#details-post-proc .details > li{list-style:none;margin-bottom:1em;}#what-do-we-have > ul > li h3,#details-style-guides .details > li h3,#bad-examples .details > li h3,#details-post-proc .details > li h3{font-size:1em}#what-do-we-have > ul > li + li,#details-style-guides .details > li + li,#bad-examples .details > li + li,#details-post-proc .details > li + li{margin-top:0}#what-do-we-have > ul > li li + li,#details-style-guides .details > li li + li,#bad-examples .details > li li + li,#details-post-proc .details > li li + li{margin-top:.5em}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{color:#7b7b7b;font-family:"proxima-nova",sans-serif;font-size:1.6rem;font-weight:600}h1,h2,h3,h4,h5,h6,dt{color:rgba(0,0,0,0.75);font-family:"ltc-bodoni-175",serif;font-size:2em;font-weight:600}h1{margin-top:0;color:#c24949;font-size:3em}dl{font-size:2em}dt{font-size:1.25em}dd{color:rgba(0,0,0,0.55);font-family:"ltc-bodoni-175",serif;font-style:italic;font-weight:400;}dd span{-webkit-transition:0.5s color;-moz-transition:0.5s color;-o-transition:0.5s color;-ms-transition:0.5s color;transition:0.5s color}dd strong{color:rgba(194,73,73,0.85)}dd .deck-current,dd.deck-current{color:rgba(0,0,0,0.85);-webkit-transition:0.5s color, 0.5s opacity;-moz-transition:0.5s color, 0.5s opacity;-o-transition:0.5s color, 0.5s opacity;-ms-transition:0.5s color, 0.5s opacity;transition:0.5s color, 0.5s opacity}figure{margin:0;position:relative}img{display:block;margin:0 auto;max-width:100%}code,pre{background:rgba(255,255,255,0.75);border:1px dotted rgba(0,0,0,0.5);-webkit-border-radius:20px;border-radius:20px;padding:1em 0 0 0}code{display:block;padding:2em 3em}.deck-container{background:rgba(245,245,245,0.3) url("../images/concrete_seamless.png") repeat;}.deck-container > .slide{height:100%;margin:2% auto;padding:2em;width:70%}.slide{opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-webkit-transition:0.5s opacity;-moz-transition:0.5s opacity;-o-transition:0.5s opacity;-ms-transition:0.5s opacity;transition:0.5s opacity;visibility:visible;}.slide.deck-before,.slide.deck-current,.slide.deck-previous{opacity:1;-ms-filter:none;filter:none}.slide li,p{font-size:2.6rem;font-weight:500}.slide li + li{margin-top:1em}#tldr-what-is-it .so-what-wrapper{position:relative;}#tldr-what-is-it .so-what-wrapper img{max-height:500px}#tldr-what-is-it .so-what-wrapper ul{zoom:1}#tldr-what-is-it .so-what-wrapper ul:before,#tldr-what-is-it .so-what-wrapper ul:after{content:"";display:table}#tldr-what-is-it .so-what-wrapper ul:after{clear:both}#details-style-guides .details{position:relative;}#details-style-guides .details > img{position:absolute;right:0}#analogy-pre-proc.deck-before .driving{opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0)}#analogy-pre-proc.deck-before .crashed{opacity:1;-ms-filter:none;filter:none}#analogy-pre-proc img{left:50%;position:absolute;top:0;-webkit-transition:0.5s opacity;-moz-transition:0.5s opacity;-o-transition:0.5s opacity;-ms-transition:0.5s opacity;transition:0.5s opacity}#analogy-pre-proc .driving{margin-left:-333px}#analogy-pre-proc .crashed{margin-left:-320px;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0)}#bad-examples .details{flex-align:flex-start}#bad-examples pre,#bad-examples figure{margin-right:2%;width:48%}#bad-examples figure{padding:2%}#details-post-proc ul,#details-post-proc figure{margin-right:2%;width:48%}#details-post-proc figure{padding:2%}

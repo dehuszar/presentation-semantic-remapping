@@ -1,0 +1,242 @@
+@import 'nib';
+@import 'base';
+@import 'buttons';
+@import 'grids';
+@import 'grids-responsive';
+@import 'menus';
+@import 'forms';
+@import 'tables';
+
+@import 'layouts';
+
+$animation-timing = 0.5s;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    color: rgba(#7b7b7b, 1);
+    font-family: "proxima-nova",sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgba(black, 0.75);
+    font-family: "ltc-bodoni-175", serif;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+h1 {
+    margin-top: 0;
+    color: rgba(194, 73, 73, 1);
+    font-size: 3em;
+}
+
+dl {
+    font-size: 2em;
+}
+
+dt {
+    @extend h2;
+    font-size: 1.25em;
+}
+
+dd {
+    color: rgba(0, 0, 0, 0.55);
+    font-family: "ltc-bodoni-175", serif;
+    font-style: italic;
+    font-weight: 400;
+
+    span {
+        transition: $animation-timing color;
+    }
+
+    strong {
+        color: rgba(194, 73, 73, 0.85);
+    }
+    
+    .deck-current,
+    &.deck-current {
+        color: rgba(0, 0, 0, 0.85);
+        transition: $animation-timing color,
+                    $animation-timing opacity;
+    }
+}
+
+figure {
+    margin: 0;
+    position: relative;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+code,
+pre {
+    background: rgba(white, 0.75);
+    border: 1px dotted rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 1em 0 0 0;
+}
+
+code {
+    display: block;
+    padding: 2em 3em;
+}
+
+.deck-container {
+    background: rgba(245, 245, 245, 0.3) url(../images/concrete_seamless.png) repeat;
+
+    > .slide {
+        height: 100%;
+        margin: 2% auto;
+        padding: 2em;
+        width: 70%;
+    }
+}
+
+.slide {
+    opacity: 0;
+    transition: $animation-timing opacity;
+    visibility: visible;
+
+    &.deck-before,
+    &.deck-current,
+    &.deck-previous {
+        opacity: 1;
+    }
+}
+
+.slide li, p {
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+.slide li {
+
+    + li {
+        margin-top: 1em;
+    }
+}
+
+#tldr-what-is-it {
+
+    .so-what-wrapper {
+        @extend $pure-g; 
+        position: relative;
+
+        > figure,
+        > .details {
+            @extend $pure-u-1-2;
+        }
+
+        img {
+            max-height: 500px;
+        }
+
+        ul {
+            clearfix();
+        }
+    }
+}
+
+#what-do-we-have > ul {
+    @extend $pure-g,
+            $tile-board-2-col;
+
+    > li {
+        @extend $pure-u-1-2;
+    }
+}
+
+#details-style-guides .details {
+    @extend $pure-g, $tile-board-2-col;
+    position: relative;
+
+    > ul {
+        @extend $pure-u-1-2;
+    }
+
+    > img {
+        position: absolute;
+        right: 0;
+    }
+}
+
+#analogy-pre-proc {
+
+    &.deck-before {
+
+        .driving {
+            opacity: 0;
+        }
+
+        .crashed {
+            opacity: 1;
+        }
+    }
+    
+    img {
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transition: $animation-timing opacity;
+    }
+
+    .driving {
+        margin-left: -333px;
+    }
+
+    .crashed {
+        margin-left: -320px;
+        opacity: 0;
+    }
+}
+
+#bad-examples {
+
+    .details {
+        @extend $pure-g,
+                $tile-board-2-col;
+        flex-align: flex-start;
+    }
+
+    pre,
+    figure {
+        @extend $pure-u-1-2;
+        margin-right: 2%;
+        width: 48%;
+    }
+
+    figure {
+        padding: 2%;
+    }
+}
+
+#details-post-proc {
+    .details {
+        @extend $pure-g,
+                $tile-board-2-col;
+    }
+
+    ul,
+    figure {
+        @extend $pure-u-1-2;
+        margin-right: 2%;
+        width: 48%;
+    }
+
+    figure {
+        padding: 2%;
+    }
+}
