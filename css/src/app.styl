@@ -46,6 +46,7 @@ dl {
 dt {
     @extend h2;
     font-size: 1.25em;
+    margin-bottom: 1.2em;
 }
 
 dd {
@@ -53,6 +54,7 @@ dd {
     font-family: "ltc-bodoni-175", serif;
     font-style: italic;
     font-weight: 400;
+    line-height: 1.4;
 
     span {
         transition: $animation-timing color;
@@ -129,6 +131,33 @@ code {
     }
 }
 
+#who-am-i {
+    h2 {
+        margin-top: 0;
+    }
+
+    h3 {
+        font-size: 1.35em;
+        margin-bottom: 0;
+
+        + p {
+            margin-top: 0;
+        }
+    }
+
+    .details-wrapper {
+        @extend $pure-g;
+
+        > * {
+            @extend $pure-u-1-2;
+        }
+
+        img {
+            max-height: 420px;
+        }
+    }
+}
+
 #tldr-what-is-it {
 
     .so-what-wrapper {
@@ -141,7 +170,7 @@ code {
         }
 
         img {
-            max-height: 500px;
+            max-height: 420px;
         }
 
         ul {

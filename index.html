@@ -1,142 +1,418 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
 
-	<title>deck.js &raquo; Modern HTML Presentations</title>
+  <title>Your deck.js Presentation</title>
 
-	<meta name="description" content="A jQuery library for modern HTML presentations">
-	<meta name="author" content="Caleb Troughton">
-	<meta name="viewport" content="width=960">
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="core/deck.core.css">
 
-	<link rel="stylesheet" href="./core/deck.core.css">
-	<link rel="stylesheet" href="./css/common.css">
-	<link rel="stylesheet" href="./css/home.css">
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <!--  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css"> -->
+  <link rel="stylesheet" href="css/app.css">
 
-	<script src="modernizr.custom.js"></script>
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <!--<link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">-->
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <!--<link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">-->
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+    <script src="//use.typekit.net/zsm3oju.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
 </head>
+<body>
+  <div class="deck-container">
 
-<body class="home">
+    <!-- Begin slides. Just make elements with a class of slide. -->
 
-<header>
-	<nav>
-		<h1><a href=".">deck.js</a></h1>
-		<ul>
-			<li><a href="./introduction">Getting Started</a></li>
-			<li><a href="./docs">Docs</a></li>
-			<li><a href="http://github.com/imakewebthings/deck.js">GitHub</a></li>
-		</ul>
-	</nav>
-</header>
+    <section class="slide" id="who-am-i">
+        <h1>Samuel Allen</h1>
+        <div class="details-wrapper">
+            <div class="personal-details">
+                <h2>Senior Interactive Developer - Isobar, Chicago</h2>
+                <h3>Email</h3>
+                <p><a href="mailto:sam.allen@isobar.com">sam.allen@isobar.com</a></p>
+                <h3>Twitter</h3>
+                <p><a href="https://twitter.com/dehuszar">@dehuszar</a></p>
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/dehuszar">https://www.linkedin.com/in/dehuszar</a></p>
+            </div>
+            <figure>
+                <img src="images/sam-allen.jpg" />
+            </figure>
+        </div>
+    </section>
 
-<article>
-	<section class="slide deck-current" id="intro">
-		<div>
-			<hgroup>
-				<h1>deck.js</h1>
-				<h2>Modern HTML Presentations</h2>
-			</hgroup>
+    <section class="slide" class="talk-structure">
+        <h1>Semantic Remapping with CSS Processors</h1>
+        <ul>
+            <li class="slide">What is it?</li>
+            <li class="slide">What do we have now?</li>
+            <li class="slide">So why is this still hard then?</li>
+            <li class="slide">How can we do better?</li>
+      </ul>
+    </section>
 
-			<p>
-				<a href="https://github.com/imakewebthings/deck.js/archive/latest.zip" class="download">Download</a>
-				or <a href="#sample" class="next">&#8594;</a> to learn more.
-			</p>
-		</div>
-	</section>
+    <section class="slide" id="tldr-what-is-it">
+        <h1>What is it, and why should I care?</h1>
+        <dl>
+            <dt>Semantic Remapping</dt>
+            <dd class="slide">A way of organizing &amp; applying reusable visual patterns <span class="slide">to semantically appropriate markup and classes that <strong>describe the content</strong></span><span class="slide">, not the content's desired visual outcome</span></dd>
+        </dl>
+        <div class="so-what-wrapper">
+            <div class="details">
+                <h2 class="slide">And that gets us what?</h2>
+                <ul>
+                    <li class="slide">Leaner, more focused, and more reusable markup</li>
+                    <li class="slide">Cleaner, more modular, and more maintainable stylesheets</li>
+                    <li class="slide">Lower file-sizes</li>
+                </ul>
+            </div>
+            <figure class="slide">
+                <img src="http://i1.kym-cdn.com/entries/icons/original/000/000/213/robocop-unicorn.jpg" />
+            </figure>
+        </div>
+    </section>
 
-	<section class="slide deck-next" id="sample">
-		<pre><code>&lt;div class=&quot;deck-container<span class="deck-state"> on-slide-1</span>&quot;&gt;
-  &lt;section class=&quot;slide<span class="slide-state"> deck-previous</span>&quot;&gt;
-    &lt;h1&gt;My Presentation&lt;/h1&gt;
-  &lt;/section&gt;
+    <section class="slide">
+        <p>We can get our code to go from this...</p>
+        <div class="slide">
+            <p>...to this</p>
+        </div>
+    </section>
 
-  <span class="example-current">&lt;section class=&quot;slide<span class="slide-state"> deck-current</span>&quot;&gt;
-    &lt;h2&gt;Slide Header&lt;/h2&gt;
-    &lt;p&gt;Here is a list of points:&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Point 1&lt;/li&gt;
-      &lt;li&gt;Point 2&lt;/li&gt;
-      &lt;li&gt;Point 3&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/section&gt;</span>
+    <section class="slide" id="what-do-we-have">
+        <h1>What do we have now?</h1>
+        <h2 class="slide">A LOT!!!</h2>
+        <ul>
+            <li class="slide" id="we-have-style-guides">
+                <h3>Style-Guide Systems</h3>
+                <ul>
+                    <li>Object Oriented CSS (OOCSS)</li>
+                    <li>Scalable Modular Architecture for CSS (SMACSS)</li>
+                    <li>Block, Element, Modular (BEM)</li>
+                    <li>Atomic CSS (ACSS)</li>
+                </ul>
+            </li>
+            <li class="slide" id="we-have-pre-proc">
+                <h3>Pre-Processors</h3>
+                <ul>
+                    <li>LESS</li>
+                    <li>SASS/SCSS</li>
+                    <li>Stylus</li>
+                </ul>
+            </li>
+            <li class="slide" id="we-have-post-proc">
+                <h3>Post-Processors</h3>
+                <ul>
+                    <li>PostCSS</li>
+                    <li>Autoprefixer</li>
+                    <li>Rework</li>
+                    <li>Lots of new entrants every day</li>
+                </ul>
+            </li>
+            <li class="slide" id="we-have-frameworks">
+                <h3>Frameworks</h3>
+                <ul>
+                    <li>Bootstrap</li>
+                    <li>Foundation</li>
+                    <li>Pure</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
 
-  <span class="example-next">&lt;section class=&quot;slide<span class="slide-state"> deck-next</span>&quot;&gt;
-    &lt;h2&gt;Another Slide&lt;/h2&gt;
-    &lt;blockquote cite=&quot;http://example.com&quot;&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
-      &lt;p&gt;&lt;cite&gt;Cicero&lt;/cite&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/section&gt;</span>
-&lt;/div&gt;</code></pre>
+    <section class="slide" id="details-style-guides">
+        <h1>Style-Guide Systems</h1>
+        <h2>Really good at:</h2>
+        <ul>
+            <li class="slide">creating a visual language for reusable layout patterns</li>
+            <li class="slide">keeping layout patterns organized, and modular</li>
+            <li class="slide">...but</li>
+        </ul>
+        <pre class="slide">
+        .container .row .column-md-12 .btn-group .btn.btn-primary {
+            content: "What were we talking about again?";
+        }
+        </pre>
+        <div class="details">
+            <ul>
+                <li class="slide">requires use of non-semantic "utility classes"</li>
+                <li class="slide">lowers markup reusability</li>
+                <li class="slide">violates the Separation of Concerns principle</li>
+                <li class="slide">leads to increasingly higher specificity overrides</li>
+            </ul>
+            <figure class="slide">
+                <img src="https://i.imgflip.com/ieu04.jpg" title="made at imgflip.com"/>
+            </figure>
+        </div>
+    </section>
 
-		<h2>How Does It Work?</h2>
+    <section class="slide" id="details-pre-proc">
+        <h1>Pre-Processors</h1>
+        <h2>Pre-Processors are AWESOME!! <small class="slide">(until they're not)</small></h2>
+        <p class="slide">What's good about them is what's bad about them</p>
+        <ul>
+            <li class="slide">Brings programmability to CSS</li>
+            <li class="slide">Makes them easy to abuse/misuse</li>
+            <li class="slide">misuse can lead to, bloat, fragile chains of inheritance, and redundancy in the css output</li>
+        </ul>
+       <pre class="slide">
+        .selector-with-common-styling {
+            background: red;
+            color: blue;
+            display: block;
+        }
 
-		<div class="sample-content">
-			<p class="slide" id="slides-html">Slides are basic HTML.</p>
-			<p class="slide" id="slide-states">The <a href="./docs/#deck-core">deck.core</a> module keeps track of slide states</span> <span class="slide" id="deck-states">and deck states</span><span class="slide" id="css-role">, leaving CSS to define what each state look like&hellip;</span></p>
-			<p class="slide" id="css-transition">&hellip;and how to transition between&nbsp;them.</p>
-			<p class="slide" id="extensions"><a href="./introduction/#extensions">Extensions</a> use core <a href="./docs/#deck-core-events">events</a> and <a href="./docs/#deck-core-methods">methods</a> to add goodies<span class="slide" id="add-what-you-want">, giving presenters the freedom to add what they want</span><span class="slide" id="leave-stuff-out"> and leave out what they don&rsquo;t.</span></p>
-		</div>
-	</section>
+        .other-selector-that-needs-same-styles {
+            &:extend(.selector-with-common-styles);
+        }
+       </pre> 
+    </section>
 
-	<section class="slide deck-after" id="now-what">
-		<h2>Great. Now What?</h2>
+    <section class="slide" id="details-post-proc">
+        <h1>Post-Processors</h1>
+        <h2>They're just like pre-processors, only later!</h2>
+        <div class="details">
+            <ul>
+                <li class="slide">They have an advantage of not needing a non-native CSS source language, but...</li>
+                <li class="slide">I don't really care about that</li>
+                <li class="slide">Similarly powerful, but not yet as stable or robust</li>
+            </ul>
+            <figure>
+                <img src="https://i.imgflip.com/ietdi.jpg" title="made at imgflip.com"/>
+            </figure>
+        </div>
+    </section>
 
-		<div class="personas">
-			<div class="slide" id="noob">
-				<h3>Only Know HTML?</h3>
-				<p>Use included premade themes and templates to start making your deck&nbsp;immediately.</p>
-				<p><a class="cta" href="./introduction">Get Started</a></p>
-			</div>
+    <section class="slide" id="analogy-pre-proc">
+        <p>CSS Processors are like a car.  <span class="slide">You can cover great distances very quickly</span><span id="car-on-fire" class="slide">, but in using them you increase your chances of being involved in an accident.</span>  <span class="slide">Especially when under time pressure, or trying to navigate with poor directions.</span></p>
+        <figure>
+            <img class="driving" src="http://www.carmagblog.co.za/wp-content/uploads/2012/07/R40-001.jpg" />
+            <img class="crashed" src="http://www.shezadmalik.com/docs/dallas_car_accident_attorney.jpg" />
+        </figure>
+    </section>
 
-			<div class="slide" id="badass">
-				<h3>CSS+JS Badass?</h3>
-				<p>Make custom decks with the API exposed by the core and&nbsp;extensions.</p>
-				<p><a class="cta" href="./docs">View Docs</a></p>
-			</div>
+    <section class="slide" id="details-frameworks">
+        <h1>Frameworks</h1>
+        <h2>Frameworks are AWESOME!!! <small class="slide">(until they're not)</small></h2>
+        <ul>
+            <li class="slide">easy for getting up and running fast</li>
+            <li class="slide">but hard to maintain</li>
+            <li class="slide">utility classes pile up and lead to a specificity arms race</li>
+            <li class="slide">don't always make sense at certain breakpoints of responsive layouts</li>
+            <li class="slide">design changes lead to breakages</li>
+            <li class="slide">often force you to choose between significant refactors or ugly ugly patches</li>
+        </ul>
+    </section>
 
-			<div class="slide" id="in-between">
-				<h3>Something In-between?</h3>
-				<p>Take a little from both worlds. Tweak a theme, hack an extension, or write some of your&nbsp;own.</p>
-			</div>
-		</div>
+    <section class="slide" id="bad-examples">
+        <p>...like these:</p>
+        <div class="details">
+    <pre class="slide">
+        @media (max-width: 767px) {
+            #sidebar {
+                width: 100%;
+            }
+        }
+    </pre>
 
-		<p class="slide" id="download-now"><a href="https://github.com/imakewebthings/deck.js/archive/latest.zip" class="download">Download</a></p>
-	</section>
+    <pre class="slide">
+        .hide {
+            display: block;
+        }
+    </pre>
 
-	<form action="." method="get" class="goto-form">
-		<label for="goto-slide">Go to slide:</label>
-		<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-		<datalist id="goto-datalist"></datalist>
-		<input type="submit" value="Go">
-	</form>
+    <pre class="slide">
+        .pull-left {
+            float: right !important;
+        }
+    </pre>
+            <figure class="slide">
+                <img src="https://imgflip.com/readImage?iid=1509839" />
+            </figure>
+        </div>
+    </section>
 
-	<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-	<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    <section class="slide" id="if-only">
+        <figure>
+            <img src="https://i.imgflip.com/iettf.jpg" title="made at imgflip.com"/> 
+        </figure>
+    </section>
 
-	<p class="deck-status">
-		<span class="deck-status-current"></span>
-		/
-		<span class="deck-status-total"></span>
-	</p>
-</article>
+    <section class="slide" id="tldr-solutions">
+        <h1>Solutions</h1>
+        <ul>
+            <li class="slide">Semantic Classing</li>
+            <li class="slide">Divide style sheets into meaningful, modular layout components</li>
+            <li class="slide">Use <strong>extend</strong> to assign visually defined classes to semantically defined classes</li>
+        </ul>
+    </section>
+    <section class="slide" id="sem-classing">
+        <h1>Semantic Classing</h1>
+        <!-- show WikiPedia def of Semantic HTML -->
+        <blockquote>
+            <p><strong>Semantic HTML</strong> is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages rather than merely to define its presentation or look. Semantic HTML is processed by regular web browsers as well as by many other user agents. CSS is used to suggest its presentation to human users.</p>
+        </blockquote>
+        <!-- show some examples -->
+        <code>
+            &lt;div class="content-wrapper"&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;section class="news-items" role="main"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;article id="news-item-436" class="news-item"&gt; <br>
+               &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;header&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h1&gt;News Item Title&lt;/h1&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2&gt;By line&lt;/h2&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/header&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="article-body"&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;[...]&lt;/p&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &lt;/article&gt; <br >
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;/section&gt; <br>
+             &nbsp;&nbsp;&nbsp;&nbsp; &lt;aside role="complementary"&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h3&gt;Author Name&lt;/h3&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ul class="articles-by-author"&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [...] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ul&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ul class="related-articles"&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [...] <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ul&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;/aside&gt; <br>
+            &lt;/div&gt;
+        </code>
+    </section>
+    <section class="slide" id="layout-objects">
+        <h1>Divide style sheets into meaningful layout pieces</h1>
+        <!-- show WikiPedia def -->
+        <!-- show some examples -->
+        <pre>
+    .layout-article-full {
+        display: flex;
 
-<footer>
-	<p><span class="version">1.1.0</span> A project of <a href="http://imakewebthings.com">I Make Web Things</a></p>
-</footer>
+        // mobile-first layout
+        [role="main"],
+        [role="complementary"],
+        [role="complementary"] > ul {
+            display: block;
+            width: 100%;    
+        }
+        
+        // tablet/portrait layout
+        @media (min-width: 960px) {
+            [role="complementary"] > ul {
+                flex: 1 auto;
+            }
 
+        // tablet/landscape, desktop layout
+        @media (min-width: 960px) {
+            // introduce 2-col layout
+            [role="main"] {
+                flex: 3 auto;
+            }    
+
+            [role="complementary"] {
+                flex: 1 auto;
+            }    
+        }
+    }
+        </pre>
+    </section>
+    <section class="slide" id="extending">
+        <h1>Semantic Remapping with @extend</h1>
+        <!-- show a quick example with Bootstrap & LESS -->
+        <!-- walk through using @import / placeholders -->
+        <pre>
+    .content-wrapper {
+        &:extend(.layout-article-full all);
+    }
+        </pre>
+        <h2 class="slide">THAT'S IT!!! <aside class="slide"><em>(...sort of)</em></aside></h2>
+    </section>
+    <section class="slide" id="demo">
+        <h1>Let's take a closer look</h1>
+        <!-- layout demo -->
+        <!-- show before / after file-sizes -->
+        <div class="slide" id="basic-extend-less">
+            <p><a href="http://localhost/presentations/semantic-remapping/demos/processor-comparisons/less/">Simple Extend Demo</a></p>
+        </div>
+        <div class="slide" id="pure-extend-demo">
+            <p><a href="http://localhost/presentations/semantic-remapping/demos/processor-comparisons/less/nested">Nested Extend Demo with Pure</a></p>
+        </div>
+    </section>
+    <section class="slide" id="benefits">
+        <h1>Benefits and Best Practices</h1>
+        <!-- super modular -->
+        <ul>
+            <li>Allows for clean, modular layout abstractions</li>
+        <!-- useful for above the fold inline style injection -->
+            <li>Allows for easy re-organization of styles for things like above the fold inline-CSS injection</li>
+        <!-- supportive of patternlab prototyping and webcomponents -->
+        <!-- file sizes stay low -->
+        <a href="http://refresh-sf.com/" target="_blank">When Compressed</a>
+    </section>
+    <section class="slide" id="placeholdernater">
+        <h1>Placeholdernater</h1>
+    </section>
+    <section class="slide" id="questions">
+        <h1>Questions?</h1>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
 <script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
 
-<script src="./core/deck.core.js"></script>
-<script src="./extensions/goto/deck.goto.js"></script>
-<script src="./extensions/navigation/deck.navigation.js"></script>
-<script src="./extensions/status/deck.status.js"></script>
-<script src="./extensions/hash/deck.hash.js"></script>
-<script src="home.js"></script>
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<!--<script src="extensions/scale/deck.scale.js"></script> -->
 
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
 </body>
 </html>
