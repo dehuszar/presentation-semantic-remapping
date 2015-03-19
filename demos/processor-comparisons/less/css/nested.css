@@ -145,6 +145,9 @@
   .content-wrapper [role="complementary"] > section .widget-wrapper {
     margin-left: 2.2vh;
   }
+  .content-wrapper [role="complementary"] > section .widget-wrapper {
+    min-height: 22.5vh;
+  }
 }
 @media (min-height: 1024px) {
   .content-wrapper [role="complementary"] > section .widget-wrapper {
