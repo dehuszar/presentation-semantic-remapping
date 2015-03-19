@@ -1,0 +1,338 @@
+button {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+button {
+  font-family: inherit;
+  font-size: 100%;
+  *font-size: 90%;
+  *overflow: visible;
+  padding: 0.5em 1em;
+  color: #444;
+  color: rgba(0, 0, 0, 0.8);
+  *color: #444;
+  border: 1px solid #999;
+  border: none rgba(0, 0, 0, 0);
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+}
+button:hover,
+button:focus {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
+  background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
+}
+button:focus {
+  outline: 0;
+}
+button:active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
+}
+button[disabled] {
+  border: none;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: 0.40;
+  -moz-opacity: 0.40;
+  opacity: 0.40;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+button,
+abutton {
+  background-color: #0078e7;
+  color: #fff;
+}
+.featured-items,
+.feature-descriptions {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+}
+.featured-items,
+.feature-descriptions {
+  word-spacing: -0.43em;
+}
+.featured-items [class*="pure-u"],
+.feature-descriptions [class*="pure-u"] {
+  font-family: sans-serif;
+}
+.featured-items > div,
+.feature-descriptions > div {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+.featured-items > div,
+.feature-descriptions > div {
+  width: 100%;
+}
+@media screen and (min-width: 48em) {
+  .featured-items > div {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+  }
+  .featured-items > div {
+    width: 33.3333%;
+    *width: 33.3023%;
+  }
+}
+body > nav ul {
+  position: absolute;
+  visibility: hidden;
+}
+body > nav.pure-menu-open,
+.pure-menubody > nav {
+  visibility: visible;
+  z-index: 2;
+  width: 100%;
+}
+body > nav ul {
+  left: -10000px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  top: -10000px;
+  z-index: 1;
+}
+body > nav > ul {
+  position: relative;
+}
+body > nav > ul {
+  left: 0;
+  top: 0;
+  visibility: visible;
+}
+body > nav > ul:focus {
+  outline: 0;
+}
+body > nav li {
+  position: relative;
+}
+body > nav a,
+body > nav .pure-menu-heading,
+body > nav > a {
+  display: block;
+  color: inherit;
+  line-height: 1.5em;
+  padding: 5px 20px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+body > nav.pure-menu-horizontal > .pure-menu-heading,
+body > nav > .pure-menu-heading,
+body > nav > a {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  margin: 0;
+  vertical-align: middle;
+}
+body > nav.pure-menu-horizontal > ul,
+body > nav > ul,
+body > nav > ul {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+}
+body > nav li a {
+  padding: 5px 20px;
+}
+body > nav > ul li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+}
+body > nav > ul li li {
+  display: block;
+}
+body > nav > ul li.pure-menu-separator {
+  height: 50%;
+  width: 1px;
+  margin: 0 7px;
+}
+body > nav > ul li li.pure-menu-separator {
+  height: 1px;
+  width: auto;
+  margin: 7px 2px;
+}
+body > nav.pure-menu-open,
+body > nav.pure-menu-horizontal li .pure-menu-children,
+body > nav li .pure-menu-children,
+.pure-menubody > nav,
+.pure-menubody > nav > ul li .pure-menu-children {
+  background: #fff;
+  border: 1px solid #b7b7b7;
+}
+body > nav.pure-menu-horizontal,
+body > nav.pure-menu-horizontal .pure-menu-heading,
+body > nav,
+body > nav .pure-menu-heading,
+body > nav > a {
+  border: none;
+}
+body > nav a {
+  border: 1px solid transparent;
+  border-left: none;
+  border-right: none;
+}
+body > nav a,
+body > nav .pure-menu-can-have-children > li:after {
+  color: #777;
+}
+body > nav .pure-menu-can-have-children > li:hover:after {
+  color: #fff;
+}
+body > nav .pure-menu-open,
+.pure-menu body > nav {
+  background: #dedede;
+}
+body > nav li a:hover,
+body > nav li a:focus {
+  background: #eee;
+}
+body > nav li.pure-menu-disabled a:hover,
+body > nav li.pure-menu-disabled a:focus {
+  background: #fff;
+  color: #bfbfbf;
+}
+body > nav .pure-menu-disabled > a {
+  background-image: none;
+  border-color: transparent;
+  cursor: default;
+}
+body > nav .pure-menu-disabled > a,
+body > nav .pure-menu-can-have-children.pure-menu-disabled > a:after {
+  color: #bfbfbf;
+}
+body > nav .pure-menu-heading,
+body > nav > a {
+  color: #565d64;
+  text-transform: uppercase;
+  font-size: 90%;
+  margin-top: 0.5em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #dfdfdf;
+}
+body > nav .pure-menu-selected a,
+body > nav > ul .active a {
+  color: #000;
+}
+body > nav.pure-menu-open.pure-menu-fixed,
+.pure-menubody > nav.pure-menu-fixed {
+  border: none;
+  border-bottom: 1px solid #b7b7b7;
+}
+html {
+  font-family: sans-serif;
+  font-size: 100%;
+}
+body {
+  margin: 0;
+}
+body > nav > a {
+  margin-top: 0;
+}
+.banner {
+  background: url(http://placekitten.com/g/1600/1200) top center no-repeat fixed;
+  display: block;
+  height: 400px;
+}
+.banner h1 {
+  font-size: 3em;
+  margin: 0;
+  padding: 3.6em 1em;
+  text-shadow: 2px 1px 4px white;
+}
+.featured-items,
+.feature-descriptions {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.featured-items .item {
+  margin: 1em 0.5em;
+  text-align: center;
+}
+.featured-items .item header {
+  background: black;
+  color: white;
+  padding-bottom: 2em;
+}
+.featured-items .item .price {
+  font-size: 6em;
+  font-weight: bold;
+}
+.featured-items .item .price span {
+  display: block;
+  font-size: 1rem;
+}
+.featured-items .item img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.featured-items .item ul {
+  list-style: none;
+  padding: 0;
+}
+.featured-items .item ul li {
+  padding: 1em 0;
+}
+.featured-items .item ul li + li {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+.feature-descriptions .description {
+  line-height: 1.6;
+  padding: 2em;
+}
+.feature-descriptions .description h3 {
+  text-transform: uppercase;
+}
+body > footer {
+  background: black;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}

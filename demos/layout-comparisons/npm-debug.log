@@ -1,0 +1,52 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/dehuszar/.nvm/v0.11.14/bin/node',
+1 verbose cli   '/home/dehuszar/.nvm/v0.11.14/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'package.json' ]
+2 info using npm@2.0.0
+3 info using node@v0.11.14
+4 warn package.json mda-resume-site@0.1.0 No description
+5 warn package.json mda-resume-site@0.1.0 No repository field.
+6 warn package.json mda-resume-site@0.1.0 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'package.json', null ]
+9 verbose cache add spec="package.json" args=["package.json",null]
+10 verbose parsed spec { raw: 'package.json',
+10 verbose parsed spec   scope: null,
+10 verbose parsed spec   name: 'package.json',
+10 verbose parsed spec   rawSpec: '',
+10 verbose parsed spec   spec: '*',
+10 verbose parsed spec   type: 'range' }
+11 verbose cache add local package /home/dehuszar/Development/presentations/semantic-css-preprocessing/demos/package.json
+12 silly lockFile 7030d0b2-package-json package.json
+13 verbose lock package.json /home/dehuszar/.npm/7030d0b2-package-json.lock
+14 verbose chmod /tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz 664
+15 verbose tar unpack /tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz
+16 silly lockFile 57e46471--8594301666598767-tmp-tgz-unpack tar:///tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz-unpack
+17 verbose lock tar:///tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz-unpack /home/dehuszar/.npm/57e46471--8594301666598767-tmp-tgz-unpack.lock
+18 silly lockFile e49b8c63-78694-0-8594301666598767-tmp-tgz tar:///tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz
+19 verbose lock tar:///tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz /home/dehuszar/.npm/e49b8c63-78694-0-8594301666598767-tmp-tgz.lock
+20 verbose gentlyRm vacuuming /tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz-unpack
+21 silly gunzTarPerm modes [ '775', '664' ]
+22 error not a package /tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz
+23 silly lockFile 57e46471--8594301666598767-tmp-tgz-unpack tar:///tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz-unpack
+24 silly lockFile 57e46471--8594301666598767-tmp-tgz-unpack tar:///tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz-unpack
+25 silly lockFile e49b8c63-78694-0-8594301666598767-tmp-tgz tar:///tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz
+26 silly lockFile e49b8c63-78694-0-8594301666598767-tmp-tgz tar:///tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz
+27 silly lockFile 7030d0b2-package-json package.json
+28 silly lockFile 7030d0b2-package-json package.json
+29 error addLocal Could not install package.json
+30 verbose stack Error: ENOENT, open '/tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz-unpack/package.json'
+30 verbose stack     at Error (native)
+31 verbose cwd /home/dehuszar/Development/presentations/semantic-css-preprocessing/demos
+32 error Linux 3.16.0-31-generic
+33 error argv "/home/dehuszar/.nvm/v0.11.14/bin/node" "/home/dehuszar/.nvm/v0.11.14/bin/npm" "install" "package.json"
+34 error node v0.11.14
+35 error npm  v2.0.0
+36 error path /tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz-unpack/package.json
+37 error code ENOENT
+38 error errno -2
+39 error ENOENT, open '/tmp/npm-6656-EIwX56s3/1424317878694-0.8594301666598767/tmp.tgz-unpack/package.json'
+40 error If you need help, you may report this error at:
+40 error     <http://github.com/npm/npm/issues>
+41 verbose exit [ -2, true ]
