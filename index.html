@@ -87,18 +87,18 @@
         </div>
     </section>
 
-    <section class="slide">
+    <section id="before-teaser" class="slide">
         <p>We can get our code to go from this...</p>
-        <figure>
+        <figure class="code-screenshot">
             <img src="images/before-code.png" />
         </figure>
+    </section>
 
-        <div class="slide">
-            <p>...to this</p>
-            <figure>
-                <img src="images/after-code.png" />
-            </figure>
-        </div>
+    <section id="after-teaser" class="slide">
+        <p>...to this <span class="slide"><em>without having to stop using your existing tools</em></span></p>
+        <figure class="code-screenshot">
+            <img src="images/after-code.png" />
+        </figure>
     </section>
 
     <section class="slide" id="what-do-we-have">
@@ -196,7 +196,8 @@
         <div class="details">
             <ul>
                 <li class="slide">They have an advantage of not needing a non-native CSS source language, but...</li>
-                <li class="slide">I don't really care about that</li>
+                <li class="slide">But supporting mixins, variables, and extends means 'native' css code is invalid without processor</li>
+                <li>May be unclear to the next developer</li>
                 <li class="slide">Similarly powerful, but not yet as stable or robust</li>
             </ul>
             <figure>
@@ -221,7 +222,7 @@
             <li class="slide">but hard to maintain</li>
             <li class="slide">utility classes pile up and lead to a specificity arms race</li>
             <li class="slide">don't always make sense at certain breakpoints of responsive layouts</li>
-            <li class="slide">design changes lead to breakages</li>
+            <li class="slide">design changes lead to breakages and cruft</li>
             <li class="slide">often force you to choose between significant refactors or ugly ugly patches</li>
         </ul>
     </section>
@@ -345,7 +346,7 @@
         &:extend(.layout-article-full all);
     }
         </pre>
-        <h2 class="slide">THAT'S IT!!! <aside class="slide"><em>(...sort of)</em></aside></h2>
+        <h2 class="slide">THAT'S IT!!! <small class="slide"><em>(...sort of)</em></small></h2>
     </section>
     <section class="slide" id="demo">
         <h1>Let's take a closer look</h1>
