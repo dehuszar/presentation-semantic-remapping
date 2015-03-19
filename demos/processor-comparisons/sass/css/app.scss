@@ -1,0 +1,29 @@
+@import 'layout';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    background: rgba(211, 211, 211, 0.25);
+    padding: 2vh;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 0.25em 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.content-wrapper {
+    @extend %layout-article-full;
+}

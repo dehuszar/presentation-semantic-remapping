@@ -1,0 +1,102 @@
+%layout-article-full {
+    @extend %pure-g;
+
+    @media (min-width: 1280px) {
+        flex-direction: row;
+    }
+
+    // mobile-first layout
+    [role="main"],
+    [role="main"] > article,
+    [role="complementary"] > section {
+
+        + * {
+            margin: 2.2vh 0 0 0;
+        }
+    }
+
+    [role="main"] > article,
+    [role="complementary"] > section .widget-wrapper {
+        background: white;
+        display: block;
+        padding: 1em;
+    }
+
+    [role="main"] > article {
+        padding: 2em 1em;
+    }
+
+    // tablet/portrait layout
+    @media (min-width: 35.5em) and (max-width: 1279px) {
+
+        [role="main"] > article {
+            padding: 2em;
+        }
+
+        [role="complementary"] {
+            flex-flow: row wrap;
+            margin-top: 0;
+            width: 100%;
+        }
+
+        [role="complementary"] > section {
+            margin-top: 2.2vh;
+
+            .widget-wrapper {
+                margin: 0 2vh;
+            }
+            
+            &:nth-of-type(odd) .widget-wrapper {
+                margin-left: 0;
+                margin-right: 1.1vh;
+            }
+            
+            &:nth-of-type(even) .widget-wrapper {
+                margin-left: 1.1vh;
+                margin-right: 0;
+            }
+        }
+    }
+
+    // desktop layout
+    @media (min-width: 1280px) {
+        align-items: stretch;
+
+        [role="main"],
+        [role="complementary"] {
+            min-height: 96vh;
+        }
+
+        // introduce 2-col layout
+        [role="main"] {
+        }
+
+        [role="main"] > article {
+            min-height: 47vh;
+        }
+
+        [role="complementary"] {
+            margin-top: 0;
+        }
+
+        [role="complementary"] > section {
+            width: 100%;
+
+            .widget-wrapper {
+                min-height: 22.5vh;
+                margin-left: 2.2vh;
+            }
+        }
+    }
+
+    // tablet/landscape, desktop layout
+    @media (min-height: 1024px) {
+
+        [role="complementary"] > section .widget-wrapper {
+
+            .widget-wrapper {
+                min-height: 22.5vh;
+            }
+        }
+    }
+}

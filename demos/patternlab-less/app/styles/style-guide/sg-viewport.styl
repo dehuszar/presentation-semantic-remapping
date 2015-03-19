@@ -1,0 +1,102 @@
+/*------------------------------------*\
+    $PATTERN LAB VIEWPORT
+\*------------------------------------*/
+
+/* Viewport */
+#sg-vp-wrap {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: $offset-top;
+	width: 100%;
+	z-index: 0;
+
+	&.wrap-animate {
+	    transition: left 0.3s ease-out;
+	}
+
+}
+
+#sg-viewport {
+	background-color: white;
+	border: 0;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	margin: 0;
+	padding: 1em 0;
+	position: relative;
+	right: 0;
+    text-align: left;
+	top: 0;
+	width: 100%;
+
+  &.hay-mode {
+	    transition: all 40s linear;
+	}
+}
+
+.no-resize {
+	#sg-cover, #sg-rightpull-container {
+		display: none;
+	}
+
+	#sg-viewport {
+		overflow: hidden !important;
+	}
+	
+}
+
+#sg-cover {
+	cursor: col-resize;
+	display: none; 
+	height: 100%; 
+	position: absolute; 
+	width: 100%; 
+	z-index: 20; 
+}
+
+#sg-gen-container {
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+	margin: 0 auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	text-align: center; 
+
+	&.hay-mode {
+	    transition: all 40s linear;
+	}
+}
+
+#sg-rightpull-container {
+	cursor: col-resize;
+	float: right; 
+	height: 100%; 
+	margin: 0; 
+	width: 14px; 
+}
+
+#sg-rightpull {
+	background: #999;
+	height: 100%; 
+	margin: 0; 
+	width: 100%; 
+    transition: background $animate-quick ease-out;
+
+	&:hover {
+		background: #666;
+	}
+
+	&:active {
+		cursor: col-resize;
+		background: #444;
+	}
+}
+
+.vp-animate {
+    transition: width 0.8s ease-out;
+}

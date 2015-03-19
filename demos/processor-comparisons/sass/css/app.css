@@ -1,0 +1,78 @@
+.content-wrapper {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 1280px) {
+    .content-wrapper {
+      flex-direction: row; } }
+  .content-wrapper [role="main"],
+  .content-wrapper [role="main"] > article,
+  .content-wrapper [role="complementary"],
+  .content-wrapper [role="complementary"] > section {
+    display: block;
+    width: 100%; }
+    .content-wrapper [role="main"] + *,
+    .content-wrapper [role="main"] > article + *,
+    .content-wrapper [role="complementary"] + *,
+    .content-wrapper [role="complementary"] > section + * {
+      margin: 1em 0 0 0; }
+  .content-wrapper [role="main"] > article,
+  .content-wrapper [role="complementary"] > section {
+    background: white;
+    padding: 1em; }
+  .content-wrapper [role="main"] > article {
+    padding: 2em 1em; }
+  @media (min-width: 600px) and (max-width: 1279px) {
+    .content-wrapper [role="main"] > article {
+      padding: 2em; }
+    .content-wrapper [role="complementary"] {
+      display: flex;
+      flex-flow: row wrap;
+      margin-top: 0; }
+    .content-wrapper [role="complementary"] > section {
+      flex: 1 45vw;
+      margin: 2vw 0 0 0; }
+      .content-wrapper [role="complementary"] > section + * {
+        margin: 2vw 0 0 2vw; }
+      .content-wrapper [role="complementary"] > section:nth-of-type(odd) {
+        margin-left: 0; } }
+  @media (min-width: 1280px) {
+    .content-wrapper {
+      align-items: stretch; }
+      .content-wrapper [role="main"],
+      .content-wrapper [role="complementary"] {
+        min-height: 96vh; }
+      .content-wrapper [role="main"] {
+        flex: 3 auto;
+        margin-right: 2vh; }
+      .content-wrapper [role="main"] > article {
+        min-height: 47vh; }
+      .content-wrapper [role="complementary"] {
+        flex: 1 auto;
+        margin-top: 0;
+        width: 25%; }
+      .content-wrapper [role="complementary"] > section {
+        min-height: 22.5vh; } }
+  @media (min-height: 1024px) {
+    .content-wrapper [role="complementary"] > section {
+      min-height: 20.5vh; } }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100vh;
+  margin: 0; }
+
+body {
+  background: rgba(211, 211, 211, 0.25);
+  padding: 2vh; }
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.25em 0; }
+
+h1 {
+  font-size: 2em; }
+
+/*# sourceMappingURL=app.css.map */

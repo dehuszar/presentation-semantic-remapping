@@ -1,0 +1,63 @@
+@import 'base';
+@import 'buttons-core';
+@import 'buttons';
+@import 'grids';
+@import 'grids-responsive';
+@import 'buttons';
+@import 'menus-core';
+@import 'menus';
+@import 'forms';
+@import 'tables';
+@import 'layout-nested-extend';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    background: rgba(211, 211, 211, 0.25);
+    padding: 2vh;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 0.25em 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.content-wrapper {
+    @extend $layout-article-full;
+}
+
+[role="main"],
+[role="main"] > article,
+[role="complementary"] > section {
+    @extend $pure-u-1-1;
+}
+
+[role="complementary"] {
+    @extend $pure-g;
+}
+
+// tablet/portrait layout
+[role="complementary"] > section {
+    @extend $pure-u-sm-1-2;
+}
+
+// desktop layout
+[role="main"] {
+    @extend $pure-u-xl-3-4;
+}
+
+[role="complementary"] {
+    @extend $pure-u-xl-1-4;
+}

@@ -1,0 +1,39 @@
+@import (reference) 'base.less';
+@import (reference) 'buttons-core.less';
+@import (reference) 'buttons.less';
+@import (reference) 'grids.less';
+@import (reference) 'grids-responsive.less';
+@import (reference) 'buttons.less';
+@import (reference) 'menus-core.less';
+@import (reference) 'menus.less';
+@import (reference) 'forms.less';
+@import (reference) 'tables.less';
+@import (reference) 'layout-nested-extend';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    background: rgba(211, 211, 211, 0.25);
+    padding: 2vh;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 0.25em 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.content-wrapper {
+    &:extend(.layout-article-full all);
+}

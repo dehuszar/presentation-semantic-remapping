@@ -1,0 +1,230 @@
+/*------------------------------------*\
+    $PATTERN LAB CONTENT 
+\*------------------------------------*/
+
+/* Section Pattern */
+.sg-pattern {
+	clearfix();
+	margin-bottom: $sg-doublespace;
+	position: relative; //Prevents absolutely-positioned elements from floating to the top
+}
+
+/* Section Head */
+.sg-pattern-head {
+	border-bottom: 1px solid $sg-secondary;
+	font-family: $sg-font;
+	font-size: $sg-font-size-sm;
+	font-weight: normal;
+	margin: $sg-doublespace 0;
+	padding: $sg-pad 0;
+
+	a {
+		color: $sg-secondary;
+		cursor: pointer;
+		display: block;
+		text-decoration: none;
+		
+		&:hover {
+			color: $sg-primary;
+		}
+	}
+}
+
+//Annotations and code view container
+.sg-view-container {
+	background: $sg-primary;
+	bottom: 0;
+	box-sizing: border-box;
+	color: $sg-secondary;
+	font-family: $sg-font;
+	font-size: 90%;
+	height: 50%;
+	left: 0;
+	line-height: 1.4;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: $sg-pad;
+	position: fixed;
+	top: auto;
+	width: 100%;
+	z-index: 2;
+
+  	a {
+    	color: $sg-quinary;
+    }
+
+     pre {
+		padding: 0 1em;
+	}
+
+	&.anim-ready {
+	  	transition:  bottom 0.3s ease-out;
+	}
+}
+
+//Annotation and code view close button
+.sg-view-close {
+	margin-bottom: -10px;
+	width: 100%;
+}
+
+.sg-view-close-btn {
+	color: #fff;
+	display: block;
+	text-align: right;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+//Annotated elements Styles
+.has-annotation {
+	box-shadow: 0 0 10px $sg-secondary;
+	cursor: help !important;
+
+	a, input {
+		cursor: help !important;
+	}
+
+	&:hover {
+		box-shadow: 0 0 10px $sg-primary;
+	}
+
+	&.active {
+		box-shadow: inset 0 0 20px $sg-secondary;
+	}
+	
+}
+
+.annotation-tip {
+	background: #444 !important;
+	border-radius: 13px !important;
+	color: #fff !important;
+	display: block;
+	font-size: 16px !important;
+	font-weight: bold !important;
+	height: 25px !important;
+	margin-left: -10px !important;
+	margin-top: -10px !important;
+	position: absolute;
+	text-align: center !important;
+	width: 25px !important;
+	z-index: 100;
+}
+
+#sg-comments-container {
+	margin: 0 auto;
+	max-width: 60em;
+}
+
+.sg-comment-container {
+	border-bottom: 1px solid $sg-tint-2;
+	margin-bottom: $sg-space;
+	padding-bottom: 2em;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	h2 {
+		margin-bottom: 0.25em;
+	}
+}
+
+.sg-code, .sg-annotations {
+	background: $sg-tertiary;
+	clear: both;
+	color: $sg-primary;
+	margin: $sg-space 0;
+	padding: $sg-pad $sg-pad-half;
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+.sg-code {
+	pre {
+		border: 1px solid $sg-tone;
+		padding: $sg-pad-half;
+		white-space: pre-line;
+		word-wrap: break-word; 
+	}
+}
+
+.sg-code-contains {
+	color: $sg-secondary;
+	font-size: 85%;
+	margin-bottom: 1rem;
+
+	code {
+		background: $sg-tone-2;
+		color: $sg-quinary;
+		padding: 0.2em;
+		position: relative;
+		top: -2px;
+	}
+}
+
+.sg-code-head {
+	color: $sg-secondary;
+	font-size: 1em;
+}
+
+#sg-code-markup {
+	padding-top: 10px;
+}
+
+#sg-code-tabs {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#sg-code-tabs li {
+	background-color: #333;
+	border-top: 2px solid #666;
+	cursor: pointer;
+	float: left;
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-right: 2px;
+	padding: 5px 15px;
+}
+
+.sg-code-title-active {
+	background-color: #272822 !important;
+	color: #bbb;
+}
+
+div.clear {
+	clear: both;
+}
+
+.sg-code-patternname {
+	color: #aaa; 
+}
+
+#sg-code-loader {
+	background-color: #000;
+	border-radius: 10px;
+	display: none;
+	left: 45%;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	top: 20%;
+	width: 150px;
+	z-index: 100; 
+}
+
+.spinner {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background: url('../images/spinner.gif');
+	border-radius: 50%;
+	height: 30px;
+	margin-left: auto; margin-right: auto;
+	opacity: .7;
+	width: 30px;
+}
+

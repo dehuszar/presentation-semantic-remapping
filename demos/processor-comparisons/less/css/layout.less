@@ -1,0 +1,95 @@
+.layout-article-full {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1280px) {
+        flex-direction: row;
+    }
+
+    // mobile-first layout
+    [role="main"],
+    [role="main"] > article,
+    [role="complementary"],
+    [role="complementary"] > section {
+        display: block;
+        width: 100%;
+
+        + * {
+            margin: 1em 0 0 0;
+        }
+    }
+
+    [role="main"] > article,
+    [role="complementary"] > section {
+        background: white;
+        padding: 1em;
+    }
+
+    [role="main"] > article {
+        padding: 2em 1em;
+    }
+
+    // tablet/portrait layout
+    @media (min-width: 600px) and (max-width: 1279px) {
+
+        [role="main"] > article {
+            padding: 2em;
+        }
+
+        [role="complementary"] {
+            display: flex;
+            flex-flow: row wrap;
+            margin-top: 0;
+        }
+
+        [role="complementary"] > section {
+            flex: 1 45vw;
+            margin: 2vw 0 0 0;
+
+            + * {
+                margin: 2vw 0 0 2vw;
+            }
+
+            &:nth-of-type(odd) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media (min-width: 1280px) {
+        align-items: stretch;
+
+        [role="main"],
+        [role="complementary"] {
+            min-height: 96vh;
+        }
+
+        // introduce 2-col layout
+        [role="main"] {
+            flex: 3 auto;
+            margin-right: 2vh;
+        }
+
+        [role="main"] > article {
+            min-height: 47vh;
+        }
+
+        [role="complementary"] {
+            flex: 1 auto;
+            margin-top: 0;
+            width: 25%;
+        }
+
+        [role="complementary"] > section {
+            min-height: 22.5vh;
+        }
+    }
+
+    // tablet/landscape, desktop layout
+    @media (min-height: 1024px) {
+
+        [role="complementary"] > section {
+            min-height: 20.5vh;
+        }
+    }
+}
