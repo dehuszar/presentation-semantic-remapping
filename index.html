@@ -197,7 +197,7 @@
             <ul>
                 <li class="slide">They have an advantage of not needing a non-native CSS source language, but...</li>
                 <li class="slide">But supporting mixins, variables, and extends means 'native' css code is invalid without processor</li>
-                <li>May be unclear to the next developer</li>
+                <li class="slide">May be unclear to the next developer</li>
                 <li class="slide">Similarly powerful, but not yet as stable or robust</li>
             </ul>
             <figure>
@@ -306,7 +306,7 @@
         <!-- show WikiPedia def -->
         <!-- show some examples -->
         <pre>
-    .layout-article-full {
+    .layout-2-col-3-1 {
         display: flex;
 
         // mobile-first layout
@@ -343,7 +343,7 @@
         <!-- walk through using @import / placeholders -->
         <pre>
     .content-wrapper {
-        &:extend(.layout-article-full all);
+        &:extend(.layout-2-col-3-1 all);
     }
         </pre>
         <h2 class="slide">THAT'S IT!!! <small class="slide"><em>(...sort of)</em></small></h2>
@@ -354,21 +354,17 @@
         <!-- show before / after file-sizes -->
         <div class="slide" id="basic-extend-less">
             <p><a href="http://localhost/presentations/semantic-remapping/demos/processor-comparisons/less/">Simple Extend Demo</a></p>
+            <p><a href="https://github.com/dehuszar/presentation-semantic-remapping/tree/master/demos/layout-comparisons">source</a></p>
         </div>
         <div class="slide" id="pure-extend-demo">
             <p><a href="http://localhost/presentations/semantic-remapping/demos/processor-comparisons/less/nested">Nested Extend Demo with Pure</a></p>
         </div>
-    </section>
-    <section class="slide" id="benefits">
-        <h1>Benefits and Best Practices</h1>
-        <!-- super modular -->
-        <ul>
-            <li>Allows for clean, modular layout abstractions</li>
-        <!-- useful for above the fold inline style injection -->
-            <li>Allows for easy re-organization of styles for things like above the fold inline-CSS injection</li>
-        <!-- supportive of patternlab prototyping and webcomponents -->
-        <!-- file sizes stay low -->
-        <a href="http://refresh-sf.com/" target="_blank">When Compressed</a>
+        <div class="slide">
+            <p><a href="http://refresh-sf.com/" target="_blank">File Size Demo</a></p>
+            <ul>
+                <li><a href="http://refresh-sf.com/" target="_blank">file 1</a></li>
+                <li><a href="https://github.com/dehuszar/presentation-semantic-remapping/blob/master/demos/layout-comparisons/css/processed.css" target="_blank">file 2</a></li>
+            </ul>
     </section>
     <section class="slide" id="placeholdernater">
         <h1>Placeholdernater</h1>
